@@ -4,7 +4,11 @@
 
 ### 1. Install Dependencies
 ```bash
+# First install to update package-lock.json
 npm install
+
+# Then you can use npm ci for faster installs
+npm ci
 ```
 
 ### 2. Manual Deployment
@@ -22,12 +26,23 @@ npm run deploy
 
 ### 4. First Time Setup
 ```bash
-# Install gh-pages if not already installed
-npm install --save-dev gh-pages
+# Install dependencies (this will add gh-pages to package-lock.json)
+npm install
 
 # Build and deploy
 npm run deploy
 ```
+
+## Node.js Version Requirements
+- **Current Issue**: You're using Node.js v18.20.8
+- **Vite Requirement**: Node.js ^20.19.0 || >=22.12.0
+- **Recommendation**: Update Node.js to version 20 or 22 for better compatibility
+
+### Update Node.js:
+1. Download from: https://nodejs.org/
+2. Install Node.js 20 LTS or 22 LTS
+3. Restart your terminal
+4. Run: `node --version` to verify
 
 ## Available Scripts
 
@@ -43,15 +58,19 @@ Your site will be available at: https://PconnorsUWO.github.io/Retro-Portfolio
 ## Troubleshooting
 
 ### Common Issues:
-1. **404 Error**: Make sure the `base` in `vite.config.ts` matches your repository name
-2. **Build Errors**: Run `npm run build` first to check for any build issues
-3. **Permission Errors**: Ensure you have push access to the repository
+1. **"gh-pages not recognized"**: Run `npm install` first to install dependencies
+2. **Package lock sync error**: Always run `npm install` before `npm ci`
+3. **Node.js version warning**: Update to Node.js 20+ for best compatibility
+4. **404 Error**: Make sure the `base` in `vite.config.ts` matches your repository name
+5. **Build Errors**: Run `npm run build` first to check for any build issues
+6. **Permission Errors**: Ensure you have push access to the repository
 
 ### Manual Steps if Automated Deployment Fails:
-1. Run `npm run build` to create the dist folder
-2. Navigate to the dist folder
-3. Initialize git: `git init`
-4. Add remote: `git remote add origin https://github.com/PconnorsUWO/Retro-Portfolio.git`
-5. Add files: `git add .`
-6. Commit: `git commit -m "Deploy to GitHub Pages"`
-7. Push to gh-pages: `git push origin main:gh-pages --force`
+1. Run `npm install` to ensure all dependencies are installed
+2. Run `npm run build` to create the dist folder
+3. Navigate to the dist folder
+4. Initialize git: `git init`
+5. Add remote: `git remote add origin https://github.com/PconnorsUWO/Retro-Portfolio.git`
+6. Add files: `git add .`
+7. Commit: `git commit -m "Deploy to GitHub Pages"`
+8. Push to gh-pages: `git push origin main:gh-pages --force`
