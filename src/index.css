@@ -1,0 +1,174 @@
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=VT323&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-retro-green: #00ff00;
+  --color-retro-amber: #ffb000;
+  --color-retro-blue: #0080ff;
+  --color-black: #141414;
+  --color-white-smoke: #ececec;
+  --color-dark-grey: #706e6e;
+  --color-light-grey: #b8b8b8;
+
+  --font-mono: "Jetbrains Mono", monospace;
+  --font-retro: "VT323", monospace;
+
+  --shadow-retro-double: -3px -3px 0 0 var(--color-white), 2px 2px 0 1px var(--color-dark-grey);
+  --shadow-retro-single: 2px 2px 0 1px var(--color-dark-grey);
+
+  --animate-blink: blink 1s infinite;
+  --animate-scan: scan 2s linear infinite;
+  --animate-scroll: scroll var(--scroll-speed, 8s) linear infinite;
+  --animate-scroll-contained: scroll-contained 8s linear infinite;
+  --animate-scroll-full: scroll-full 24s linear infinite;
+  --animate-typewriter: typing 3.5s steps(30, end), blink-caret 0.5s step-end infinite;
+  --animate-typing: typing 3.5s steps(30, end);
+  --animate-blink-caret: blink-caret 0.5s step-end infinite;
+}
+
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+
+@keyframes scan {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(100vh); }
+}
+
+@keyframes scroll {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+
+@keyframes scroll-contained {
+  0% { transform: translateX(calc(100% + 8px)); }
+  100% { transform: translateX(calc(-100% - 8px)); }
+}
+
+@keyframes scroll-full {
+  0% { 
+    transform: translateX(calc(100% + 100vw)); 
+  }
+  100% { 
+    transform: translateX(calc(-100% - 100vw)); 
+  }
+}
+
+/* Custom thin scrollbar styles */
+.scrollbar-thin {
+  scrollbar-width: thin;
+}
+
+/* Window resize handles */
+.window-resizable {
+  position: relative;
+}
+
+.resize-handle {
+  position: absolute;
+  background: transparent;
+  z-index: 10;
+}
+
+.resize-handle:hover {
+  background: rgba(0, 255, 0, 0.1);
+}
+
+/* Corner resize handles */
+.resize-handle-nw {
+  top: 0;
+  left: 0;
+  width: 10px;
+  height: 10px;
+  cursor: nw-resize;
+}
+
+.resize-handle-ne {
+  top: 0;
+  right: 0;
+  width: 10px;
+  height: 10px;
+  cursor: ne-resize;
+}
+
+.resize-handle-sw {
+  bottom: 0;
+  left: 0;
+  width: 10px;
+  height: 10px;
+  cursor: sw-resize;
+}
+
+.resize-handle-se {
+  bottom: 0;
+  right: 0;
+  width: 10px;
+  height: 10px;
+  cursor: se-resize;
+}
+
+/* Edge resize handles */
+.resize-handle-n {
+  top: 0;
+  left: 10px;
+  right: 10px;
+  height: 3px;
+  cursor: n-resize;
+}
+
+.resize-handle-s {
+  bottom: 0;
+  left: 10px;
+  right: 10px;
+  height: 3px;
+  cursor: s-resize;
+}
+
+.resize-handle-w {
+  top: 10px;
+  left: 0;
+  bottom: 10px;
+  width: 3px;
+  cursor: w-resize;
+}
+
+.resize-handle-e {
+  top: 10px;
+  right: 0;
+  bottom: 10px;
+  width: 3px;
+  cursor: e-resize;
+}
+
+/* Window content scrolling */
+.window-content-scrollable {
+  overflow: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-dark-grey) var(--color-light-grey);
+}
+
+.window-content-scrollable::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.window-content-scrollable::-webkit-scrollbar-track {
+  background: var(--color-light-grey);
+  border: 1px solid var(--color-dark-grey);
+}
+
+.window-content-scrollable::-webkit-scrollbar-thumb {
+  background: var(--color-dark-grey);
+  border: 1px solid var(--color-black);
+}
+
+.window-content-scrollable::-webkit-scrollbar-thumb:hover {
+  background: var(--color-retro-green);
+}
+
+.window-content-scrollable::-webkit-scrollbar-corner {
+  background: var(--color-light-grey);
+}
+
