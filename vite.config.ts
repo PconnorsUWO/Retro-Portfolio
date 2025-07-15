@@ -7,6 +7,7 @@ export default defineConfig({
   plugins: [react()],
   root: '.',
   publicDir: 'public',
+  base: '/Retro-Portfolio/',
   build: { 
     outDir: 'dist',
   },
