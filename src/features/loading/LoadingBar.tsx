@@ -1,8 +1,7 @@
 import { useState, useEffect, useMemo } from 'react'
 
-const TOTAL_CELLS = 14
+const TOTAL_CELLS = 12
 
-// ■ CONFIG OBJECT ■
 const cellConfig = {
   count: TOTAL_CELLS,
   sizeClass: 'flex-1 h-full', 

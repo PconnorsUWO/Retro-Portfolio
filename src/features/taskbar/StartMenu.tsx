@@ -89,17 +89,17 @@ const StartMenu: React.FC<StartMenuProps> = ({ isOpen, onClose, onShutDown }) =>
         <div className="p-4">
           <div className="space-y-2">
             <MenuItem 
-              icon={<img src="/folder.svg" alt="folder" />} 
+              icon={<img src="./folder.svg" alt="folder" />} 
               text="PROJECTS" 
               onClick={() => console.log('Programs clicked')}
             />
             <MenuItem 
-              icon={<img src="/doc.svg" alt="doc" />}
+              icon={<img src="./doc.svg" alt="doc" />}
               text="DOCUMENTS" 
               onClick={() => console.log('Documents clicked')}
             />
             <MenuItem 
-              icon={<img src="/disk.svg" alt="disk" />} 
+              icon={<img src="./disk.svg" alt="disk" />} 
               text="HELP" 
               onClick={() => console.log('Help clicked')}
             />

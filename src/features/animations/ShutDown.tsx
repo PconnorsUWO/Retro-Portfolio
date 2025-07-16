@@ -43,7 +43,7 @@ const ShutDown: React.FC<ShutDownProps> = ({ isActive, onAnimationComplete }) =>
       {/* Optional: Add a subtle scanline effect during closing */}
       {animationStage === 'closing' && (
         <div className="absolute inset-0 flex items-center justify-center">
-          <div className="w-full h-[2px] bg-retro-green opacity-50 animate-pulse" />
+          <div className="w-full h-[2px] opacity-50 animate-pulse" />
         </div>
       )}
     </div>

@@ -14,3 +14,6 @@ export * from './useWindowDrag';
 
 // Example components
 export { default as WindowWithCornerConstraints } from './created-windows/WindowWithCornerConstraints';
+export { default as KeyboardSoundDemo } from './created-windows/KeyboardSoundDemo';
+export { default as KeyboardSoundDemoWindow } from './created-windows/KeyboardSoundDemoWindow';
+export { default as TestWindow } from './created-windows/TestWindow';

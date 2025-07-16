@@ -13,7 +13,7 @@ const WelcomeCard: React.FC = () => {
         {/* Cat Logo */}
         <div className="mb-4 flex items-center justify-center">
           <img 
-            src="/cat.png" 
+            src="./cat.png" 
             alt="Cat logo" 
             width={120} 
             height={120}

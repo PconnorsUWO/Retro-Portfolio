@@ -5,7 +5,7 @@ import DesktopIcon from '../../components/DesktopIcon';
 import WelcomeCard from './WelcomeCard';
 import TestWindow from '../window/created-windows/TestWindow';
 import WindowWithCornerTracking from '../window/created-windows/WindowWithCornerTracking';
-import DragConstraintTest from '../window/created-windows/DragConstraintTest';
+import DragConstraintTest from '../window/created-windows/KeyboardSoundDemo';
 
 interface DesktopProps {
   onShutDown: () => void;
@@ -16,7 +16,7 @@ const Desktop: React.FC<DesktopProps> = ({ onShutDown }) => {
     <div 
       className="w-screen h-screen"
       style={{
-        backgroundImage: "url('/desktop-background.svg')",
+        backgroundImage: "url('./desktop-background.svg')",
         backgroundSize: '2px 2px',
         backgroundRepeat: 'repeat',
         backgroundColor: 'black' 
@@ -27,7 +27,7 @@ const Desktop: React.FC<DesktopProps> = ({ onShutDown }) => {
         {/* Desktop Icons Container */}
         <div className="absolute inset-0 p-4">
           <DesktopIcon 
-            icon={<img src="/folder.svg" alt="folder" />}
+            icon={<img src="./folder.svg" alt="folder" />}
             text="PROJECTS"
             x={30}
             y={30}
@@ -35,7 +35,7 @@ const Desktop: React.FC<DesktopProps> = ({ onShutDown }) => {
             onClick={() => console.log('My Projects clicked')}
           />
           <DesktopIcon 
-            icon={<img src="/doc.svg" alt="document" />}
+            icon={<img src="./doc.svg" alt="document" />}
             text="DOCUMENTS"
             x={30}
             y={180}
@@ -43,7 +43,7 @@ const Desktop: React.FC<DesktopProps> = ({ onShutDown }) => {
             onClick={() => console.log('Resume clicked')}
           />
           <DesktopIcon 
-            icon={<img src="/disk.svg" alt="disk" />}
+            icon={<img src="./disk.svg" alt="disk" />}
             text="HELP"
             x={30}
             y={330}
@@ -57,8 +57,6 @@ const Desktop: React.FC<DesktopProps> = ({ onShutDown }) => {
         <WelcomeCard />
         
         {/* Desktop Windows */}
-        <DragConstraintTest />
-
         {/* Additional desktop content can go here */}
 
         

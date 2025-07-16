@@ -74,14 +74,12 @@ export const createRectangularConstraints = (
 /**
  * Create corner constraints for keeping window within viewport
  */
-export const createViewportConstraints = (
-  margin: number = 0
-): WindowCornerConstraints => {
+export const createViewportConstraints = (): WindowCornerConstraints => {
   const viewport = {
-    left: margin,
-    top: margin,
-    right: window.innerWidth - margin,
-    bottom: window.innerHeight - margin
+    left: window.innerWidth,
+    top: window.innerHeight,
+    right: window.innerWidth,
+    bottom: window.innerHeight - window.innerHeight * 0.1
   };
   
   return createRectangularConstraints(viewport);

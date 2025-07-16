@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Window } from '../';
+import { createViewportConstraints } from '../';
 
 const TestWindow: React.FC = () => {
   const [isOpen, setIsOpen] = useState(true);
@@ -32,6 +33,7 @@ const TestWindow: React.FC = () => {
       resizable={true}
       minWidth={300}
       minHeight={200}
+      cornerConstraints={createViewportConstraints()}
     >
       <h2 className="font-retro text-2xl mb-4 text-black">Welcome to the Test Window!</h2>
       <p className="font-retro text-lg text-black mb-4">
